@@ -2,9 +2,9 @@
   "name": "dht11-raspi3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "mam_publish.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "mam_publish.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
