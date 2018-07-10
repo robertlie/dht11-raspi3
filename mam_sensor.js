@@ -8,9 +8,10 @@ https://www.mobilefish.com/services/cryptocurrency/mam.html (Select option: Data
 
 Usage:
 1)	Connect DHT11 sensor to Raspberry Pi.
-2) 	You can change the default settings: MODE, SIDEKEY, SECURITYLEVEL or TIMEINTERVAL
+2)	Do not forget to type: npm install
+3) 	You can change the default settings: MODE, SIDEKEY, SECURITYLEVEL or TIMEINTERVAL
 	If you do, make the same changes in mam_receive.js file.
-3) 	Start the app: node mam_sensor.js
+4) 	Start the app: node mam_sensor.js
 
 More information:
 https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html
