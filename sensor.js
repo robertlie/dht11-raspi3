@@ -6,7 +6,15 @@ This file will only work a Raspberry Pi.
 
 Usage:
 1) 	You can change the default setting: TIMEINTERVAL
-2)	Start the app: node sensor.js
+2)	Do not forget to type: npm install
+3)	Start the app: node sensor.js
+4) 	If you encounter problems reading the DHT11 sensor data and wants more logging:
+	Type: npm uninstall node-dht-sensor
+	Type: npm install node-dht-sensor --dht_verbose=true
+
+	If you have fixed your problem:
+	Type: npm uninstall node-dht-sensor
+	Type: npm install node-dht-sensor --dht_verbose=false 
 
 More information:
 https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html
@@ -26,6 +34,8 @@ function readSensor(){
 		}
 	});
 }
+
+readSensor();
 
 // Automatically update sensor value every N seconds
 setInterval(readSensor, TIMEINTERVAL*1000);
