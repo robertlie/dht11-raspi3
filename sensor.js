@@ -21,9 +21,9 @@ https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html
 */
 const sensor = require('node-dht-sensor');
 
-const TIMEINTERVAL = 10;  	// seconds
-const SENSORTYPE = 11;		// 11=DHT11, 22=DHT22
-const GPIOPIN = 4;			// The Raspi gpio pin where data from the DHT11 is read
+const TIMEINTERVAL 	= 10;  	// seconds
+const SENSORTYPE 	= 11;	// 11=DHT11, 22=DHT22
+const GPIOPIN 		= 4;	// The Raspi gpio pin where data from the DHT11 is read
 
 function readSensor(){
 	sensor.read(SENSORTYPE, GPIOPIN, function(err, temperature, humidity) {
