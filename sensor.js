@@ -14,12 +14,12 @@ Usage:
 
 	If you have fixed your problem:
 	Type: npm uninstall node-dht-sensor
-	Type: npm install node-dht-sensor --dht_verbose=false 
+	Type: npm install node-dht-sensor --dht_verbose=false
 
 More information:
 https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html
 */
-var sensor = require('node-dht-sensor');
+const sensor = require('node-dht-sensor');
 
 const TIMEINTERVAL = 10;  	// seconds
 const SENSORTYPE = 11;		// 11=DHT11, 22=DHT22
