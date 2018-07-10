@@ -69,26 +69,24 @@ const getDateAndTime = function() {
 	return time;
 }
 
-const generateJSON = function() {
-	sensor.read(SENSORTYPE, GPIOPIN, function(err, temperature, humidity) {
+function readSensor(){
+	sensor.read(SENSORTYPE, GPIOPIN, async function(err, temperature, humidity) {
 		if (!err) {
 			const dateTime = getDateAndTime();
 			const data = `{temp: ${temperature.toFixed(1)} C, humidity: ${humidity.toFixed(1)} %}`;
 			const json = {"data": data, "dateTime": dateTime};
-			return json;
+
+			const root = await publish(json);
+			console.log(`dateTime: ${json.dateTime}, data: ${json.data}, root: ${root}`);
+
 		} else {
 			console.log(err);
 		}
 	});
 }
 
-const executeDataPublishing = async function() {
-	const json = generateJSON();
-	const root = await publish(json);
-	console.log(`dateTime: ${json.dateTime}, data: ${json.data}, root: ${root}`);
-}
-
 // Start it immediately
-executeDataPublishing();
+readSensor();
 
-setInterval(executeDataPublishing, TIMEINTERVAL*1000);
+// Automatically update sensor value every N seconds
+setInterval(readSensor, TIMEINTERVAL*1000);
