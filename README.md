@@ -5,7 +5,7 @@ This is a tutorial how to send DHT11 sensor data using Raspberry Pi 3 to IOTA Ta
 ## Requirements
 
 How the Raspberry Pi is prepared and how to connect the DHT11 sensor to the Raspberry Pi is explained at:  
-[Mobilefish.com][1]
+[https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html][1]
 
 [1]: https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html "Mobilefish.com"
 
