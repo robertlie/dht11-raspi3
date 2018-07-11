@@ -8,6 +8,7 @@ All hardware requirements and how the Raspberry Pi is prepared is explained at:
 [https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html][1]
 
 [1]: https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html "Mobilefish.com"
+[2]: https://youtu.be/atJ-ZT7aKoA "YouTube video"
 
 ![alt text](https://www.mobilefish.com/images/developer/raspi_dht11.jpg "DHT11 sensor connected to Raspberry Pi 3")
 
@@ -29,3 +30,7 @@ npm install
 
 How to use the scripts see:  
 [https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html][1]
+
+or watch this YouTube video:
+[https://youtu.be/atJ-ZT7aKoA][2]
+
