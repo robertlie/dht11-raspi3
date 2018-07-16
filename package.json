@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "iota.lib.js": "^0.4.7",
+    "moment": "^2.22.2",
     "node-dht-sensor": "0.0.34"
   }
 }
