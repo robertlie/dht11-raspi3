@@ -15,14 +15,15 @@ More information:
 https://www.mobilefish.com/developer/iota/iota_quickguide_raspi_mam.html
 */
 
-const Mam 	= require('./lib/mam.client.js');
-const IOTA 	= require('iota.lib.js');
-const iota 	= new IOTA({ provider: 'https://nodes.testnet.iota.org:443' });
+const Mam = require('./lib/mam.client.js');
+const IOTA = require('iota.lib.js');
+const moment = require('moment');
+const iota = new IOTA({ provider: 'https://nodes.testnet.iota.org:443' });
 
-const MODE			= 'restricted';		// public, private or restricted
-const SIDEKEY		= 'mysecret';		// Enter only ASCII characters. Used only in restricted mode
-const SECURITYLEVEL	= 3;				// 1, 2 or 3
-const TIMEINTERVAL	= 30;				// seconds
+const MODE = 'restricted'; // public, private or restricted
+const SIDEKEY = 'mysecret';	// Enter only ASCII characters. Used only in restricted mode
+const SECURITYLEVEL	= 3; // 1, 2 or 3
+const TIMEINTERVAL	= 30; // seconds
 
 // Initialise MAM State
 let mamState = Mam.init(iota, undefined, SECURITYLEVEL);
