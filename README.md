@@ -1,4 +1,4 @@
-# Send DHT11 sensor data to the IOTA Tangle using MAM
+# Send DHT11 sensor data to the IOTA Tangle using MAM and Raspberry Pi 3
 
 This is a tutorial how to send DHT11 sensor data using Raspberry Pi 3 to IOTA Tangle using Masked Authenticated Messaging (MAM).
 
