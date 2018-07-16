@@ -53,23 +53,10 @@ const publish = async function(packet) {
 	return message.root;
 }
 
-const getDateAndTime = function() {
-	const a = new Date();
-	const year = a.getUTCFullYear();
-	const month = (a.getUTCMonth()+1) < 10 ? '0' + (a.getUTCMonth()+1) : (a.getUTCMonth()+1);
-	const date = a.getUTCDate() < 10 ? '0' + a.getUTCDate() : a.getUTCDate();
-	const hour = a.getUTCHours() < 10 ? '0' + a.getUTCHours() : a.getUTCHours();
-	const min = a.getUTCMinutes() < 10 ? '0' + a.getUTCMinutes() : a.getUTCMinutes();
-	const sec = a.getUTCSeconds() < 10 ? '0' + a.getUTCSeconds() : a.getUTCSeconds();
-	const time = date + '/' + month + '/' + year + ' ' + hour + ':' + min + ':' + sec ;
-	return time;
-}
-
 const generateJSON = function() {
 	// Generate some random numbers simulating sensor data
 	const data = Math.floor((Math.random()*89)+10);
-
-	const dateTime = getDateAndTime();
+	const dateTime = moment().utc().format('DD/MM/YYYY hh:mm:ss');
 	const json = {"data": data, "dateTime": dateTime};
 	return json;
 }
